@@ -5,12 +5,11 @@ class Profile
     @url = url
   end
 
-<<<<<<< HEAD
+
   def open
     Launchy.open( url )
   end
-=======
+
 def open
   Launchy.open(url)
->>>>>>> retrieve-information
 end
