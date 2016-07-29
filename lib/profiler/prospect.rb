@@ -1,5 +1,5 @@
 class Prospect
-  attr_reader :name, :email :profiles
+  attr_reader :name, :email, :profiles
 
 
   def initialize(name = nil, email)
