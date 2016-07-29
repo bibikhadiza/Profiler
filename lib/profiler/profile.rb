@@ -5,7 +5,6 @@ class Profile
   	@url = url
   end
 
-  def open
-  	open url
-  end
+def open
+  Launchy.open(url)
 end
