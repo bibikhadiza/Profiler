@@ -1,5 +1,5 @@
 require 'fullcontact'
-require "pry"
+require 'pry'
 
 class Employer
   attr_reader :all_prospects, :all_profiles
@@ -14,9 +14,9 @@ class Employer
   	self.all_prospects << prospect
   end
 
-  def get_profiles(prospect)
+  def retrieve_profiles(prospect)
   	save(prospect)
-  	prospect.profiles
+  	prospect.get_profiles
   end
 
 end

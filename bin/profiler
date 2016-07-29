@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require_relative '../config/environment'
+
+
+
+user = Employer.new
+
+puts "Enter an email of a person you would like to 'stalk'"
+email = gets.strip
+person = Prospect.new(email)
+
+profiles = user.retrieve_profiles(person)
+
+system 'clear'
+puts "\n\n== SITE ======== USERNAME ======== URL ==================================\n\n"
+profiles.each_with_index do |profile, index|
+  puts "#{index + 1}. #{profile.site || "\t"} \t #{profile.username || "\t"} \t #{profile.url || "\t"}\n\n"
+end
+
+
+puts "Enter the index number of a profile to view it on your browser"
+index = gets.strip.to_i - 1
+
+profiles[index].open

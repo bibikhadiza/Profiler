@@ -6,3 +6,4 @@ gemspec
 gem 'require_all'
 gem 'fullcontact'
 gem "launchy"
+gem 'pry'
